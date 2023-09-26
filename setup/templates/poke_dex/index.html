@@ -1,24 +1,50 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'fa/css/all.min.css' %}">
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+   
     <link rel="icon" href="{% static 'images/favicon-16x16.png' %}">
     <title>PokeDex</title>
 </head>
+<script src="{% static 'js/script.js' %}"></script>
 <body style="margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh;
             background-image: url('{% static "images/wall.jpg" %}'); background-size: cover; background-position: center;">
 
-    <div style="text-align: center">
-        <img src="{% static 'images/pokedex.png' %}" style="max-width: 100%; height: auto; padding: 1rem;">
+    <img src="{% static 'images/pokedex.png' %}" class="img-fluid" alt="PokeDex">
+    <img id="pokemonImage" class="img-fluid" alt="pokemon" style="position: absolute; bottom: 53%;left: 50%;transform: translate(-63%, 20%);height: 110px;">
+
+    <div class="col-md-12 text-center d-flex justify-content-center" style="position: absolute; bottom: 43.5%">
+        <label  id="label_id" style="font-family: Retro-Gaming;" ></label>
+        <label class="ml-2" id="label_name" style="font-family: Retro-Gaming;"></label>
     </div>
-    <button style="text-align: center;" >text</button>
-</body>
+    <div class="col-md-1 d-flex justify-content-center input-group" style="position: absolute; bottom: 33.5%">
+        <input type="text" class="col form-control" id="input_poke" placeholder="ID or NAME">
+        <div class="input-group-append">
+            <button class="btn btn-outline-light" type="button" id="button-search">Search</button>
+        </div>
+    </div>
+
+    <div class="col-md-auto text-center d-flex justify-content-center" style="position: absolute; bottom: 25.5%">
+        <button  id="prevButton" class="mr-3 col btn btn-light">Prev</button>
+        <button  id="nextButton" class="ml-3 col btn btn-light">Next</button>
+    </div>
       
 </body>
 </html>
+
+<style>
+    @font-face {
+    font-family: 'Retro-Gaming';
+    src: url('{% static 'fa/webfonts/Retro-Gaming.ttf' %}') format('truetype');
+    
+    }
+
+    .retro-font {
+        font-family: 'Minecraft'; 
+    }
+</style>

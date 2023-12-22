@@ -16,3 +16,6 @@ Para instalar o PokeDex, siga estas etapas:
   
 ### Mac/Linux
 - source venv/bin/activate
+
+Rodar o Projeto apos ativar o Venv
+- python manage.py runserver

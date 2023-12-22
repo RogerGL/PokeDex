@@ -1,5 +1,7 @@
 ## 💻 Pré-requisitos
 
+<img src="example.png" alt="Exemplo imagem">
+
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Django==4.2.4
 - python-dotenv==1.0.0
